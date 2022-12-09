@@ -58,7 +58,7 @@ The algorithm scores different board states using information about what pieces 
 <img src="./images/chess_proj_location_values.png" width="600">
 
 ## Other Peripherals
-* __Red__ __LED:__ The LED has two conditions that cause it to flash:
+* __Red__ __LED:__ The LED has two conditions that cause it to turn on:
 1. If a player tries to select a square it cannot, such as an empty square
 2. If a player tries to move outside of the boundaries of the game board
 

@@ -31,7 +31,7 @@ In this project we built a chess game using an mbed LPC1768 Microcontroller. The
 * __BoardState__: Stores the state of the chess board and implement game moves such as moving and capturing pieces. The game board is implemented as an array of 64 characters. The method for calculating the utility of the board state for the AI opponent is in this class.
 * __Gameboard__: Implemented as a wrapper around the BoardState class with the addition of rendering graphics for the LCD display and the game cursor. The Gameboard class includes sprites for images of pieces nad methods for selecting/unselecting squares during the game.
 
-<img src="./images/chess_proj_initial_board.png" width="600">
+<img src="./images/chess_proj_initial_board.png" width="300">
 
 Initial game board with the names for pieces used in the code
 
@@ -43,7 +43,7 @@ The game process is implemented as a state machine with five states:
 * __blackPickedUp__: The same as the __whitePickedUp__ state, and advances back to __whiteSelecting__ once the move is finalized.
 * __blackAI__: The program runs the Minimax Algorithm to decide the best move and once it makes the move, changes state to __whiteSelecting__.
 
-<img src="./images/chess_proj_state_machine.png" width="600">
+<img src="./images/chess_proj_state_machine.png" width="350">
 
 ### AI Implementation
 The Minimax Algorithm is used by engines for various games such as chess and tic tac toe. It functions by assigning a numerical value to each possible state of the game and wowking to maximize the value of the game state for its benefit. It achieves this by looking ahead to all possible moves and building a tree. It makes a decision based on either maximizing the value of its move or minimizing the value of the opponent, hence the name minimax. A good summary of the algorithm can be found at https://www.youtube.com/watch?v=l-hh51ncgDI&t=343s. The efficiency of the algorithm is __O(n^m)__, with __n__ being the number of possible actions in the game and __m__ being the depth of the tree.
@@ -53,6 +53,6 @@ For our implementation, we were bounded by the real-time reponse constraints of 
 #### How the board state utility is calculated
 The algorithm scores different board states using information about what pieces are on the board and their locations. Since the AI control black pieces, the following values are inverted when used by the program so that it maximizes the output score:
 
-<img src="./images/chess_proj_piece_values.png" width="600">
+<img src="./images/chess_proj_piece_values.png" width="350">
 
 <img src="./images/chess_proj_location_values.png" width="600">

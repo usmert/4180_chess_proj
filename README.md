@@ -68,7 +68,7 @@ The case of the player choosing a square other than the possible moves after a p
 * __Speaker:__ The speaker plays a sound once a king captured and the game ends in order to celebrate the winner.
 
 ## Further Work
-* __Checkmate__ __Condition:__ In our implementation, the move capturing either the black or white king should be made for the game to end. However, if we had more time, we could add code to check if there are no legal moves to save the king and finish the game. Moreover, in chess the user has to move to protect the king if it is under threat.
-* __Pruning:__ Various optimizations for the Minimax Alogorithm used by our algorithm exists. Pruning is one these, and avoids making unnecessary calculations. These optimizations can be implemented to make the tree constructed deeper and our AI opponent smarter.
+* __Checkmate__ __Condition:__ In our implementation, the move to capture either the black or white king needs to be made for the game to end. However, if we had more time, we could add code to check if there are no legal moves to save the king and finish the game. Moreover, in chess the player has to act to protect the king if it is under threat.
+* __Pruning:__ Various optimizations for the Minimax Alogorithm used by our algorithm exist. Pruning is one these, and avoids adding unnecessary nodes to the tree and calculate their utilities. These optimizations can be implemented to allow the tree constructed to be deeper resulting in smarter AI.
 * __Simpler Wiring:__ Due to the large number of hardware components used, the breadboard we built the device on became dense with a lot of wires. This increased the risk of crashes due to wires unplugging from the breadboard. Reorganizing the wiring can reduce the risk of such crashes.
 * __External__ __Casing:__ Protecting the device with external casing will make the device less susceptible to damage.

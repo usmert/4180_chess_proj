@@ -1,4 +1,4 @@
-# mbed Chess Game
+# Mbed Chess Game
 An embedded chess game device with 1-player and 2-player functionality.
 Team Members: Logan Starr, Mert Us, and Matthew Hannay
 

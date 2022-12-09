@@ -48,11 +48,20 @@ The game process is implemented as a state machine with five states:
 ### AI Implementation
 The Minimax Algorithm is used by engines for various games such as chess and tic tac toe. It functions by assigning a numerical value to each possible state of the game and wowking to maximize the value of the game state for its benefit. It achieves this by looking ahead to all possible moves and building a tree. It makes a decision based on either maximizing the value of its move or minimizing the value of the opponent, hence the name minimax. A good summary of the algorithm can be found at https://www.youtube.com/watch?v=l-hh51ncgDI&t=343s. The efficiency of the algorithm is __O(n^m)__, with __n__ being the number of possible actions in the game and __m__ being the depth of the tree.
 
-For our implementation, we were bounded by the real-time reponse constraints of our device, since the user cannot sit and wait for the AI to calculate the best move. After testing out different depth levels, the most feasible was level 3. Therefore, the in-game AI looks ahead to 3 moves to decide the best move.
+For our implementation, we were bounded by the real-time reponse constraints of our device, since the user cannot sit and wait for the AI to calculate the best move. After testing out different depth levels, the most feasible was level 3. Therefore, our in-game AI looks ahead to 3 moves to make the best decision.
 
-#### How the board state utility is calculated
+#### How the utility of the board state is calculated
 The algorithm scores different board states using information about what pieces are on the board and their locations. Since the AI control black pieces, the following values are inverted when used by the program so that it maximizes the output score:
 
 <img src="./images/chess_proj_piece_values.png" width="350">
 
 <img src="./images/chess_proj_location_values.png" width="600">
+
+## Other Peripherals
+* __Red__ __LED:__ The LED has two conditions that cause it to flash:
+1. If a player tries to select a square it cannot, such as an empty square
+2. If a player tries to move outside of the boundaries of the game board
+The case of the player choosing a square other than the possible moves after a piece is selected is not considered illegal, since it is used to unselect a piece.
+* __Push__ __Button:__ The button on the board the game. The game can be reset at any time and the button should be pressed to start a new game after the old one ends as well.
+* __DIP__ __Switch:__ The switch is used to choose between 1-player and 2-player modes. After switching the game mode, the user needs to reset to start a new game with the chosen game mode.
+* __Speaker:__ The speaker plays a sound once a king captured and the game ends in order to celebrate the winner.
